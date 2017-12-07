@@ -41,14 +41,30 @@ namespace MyGym
 			}
 		}
 		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int red_button = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int btnPersonalStat = 2130968577;
+			// aapt resource value: 0x7f060001
+			public const int btnPersonalStat = 2131099649;
 			
-			// aapt resource value: 0x7f040000
-			public const int btnTrainingPlans = 2130968576;
+			// aapt resource value: 0x7f060000
+			public const int btnTrainingPlans = 2131099648;
 			
 			static Id()
 			{
@@ -63,8 +79,11 @@ namespace MyGym
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Main = 2130837504;
+			// aapt resource value: 0x7f030000
+			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int TraininPlansUI = 2130903041;
 			
 			static Layout()
 			{
@@ -79,8 +98,8 @@ namespace MyGym
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int app_name = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int app_name = 2130968576;
 			
 			static String()
 			{
@@ -88,6 +107,22 @@ namespace MyGym
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int button_text = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
