@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Button
+        android:text="תוכנית אימונים"
+        android:layout_width="328.0dp"
+        android:layout_height="197.5dp"
+        android:id="@+id/btnTrainingPlans"
+        android:layout_marginTop="60.0dp"
+        android:layout_marginBottom="20.0dp"
+        android:layout_marginLeft="30.5dp"
+        android:layout_marginRight="0.0dp" />
+    <Button
+        android:text="התקדמות אישית"
+        android:layout_width="328.0dp"
+        android:layout_height="197.5dp"
+        android:id="@+id/btnPersonalStat"
+        android:layout_marginTop="25.5dp"
+        android:layout_marginBottom="20.0dp"
+        android:layout_marginLeft="30.5dp"
+        android:layout_marginRight="0.0dp" />
+</LinearLayout>
