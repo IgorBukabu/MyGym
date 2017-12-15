@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Common;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using DataLogic;
 
 namespace MyGym
 {
@@ -24,15 +25,21 @@ namespace MyGym
             // Create your application here
             SetContentView(Resource.Layout.TraininPlansUI);
 
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            TrainingPlanDataAccess.PlanTrainingDataBase.SaveTrainingPlan(new TrainingPlan("אני אוהב מסה", 2));
+
             this.lstTrainingPlansList.Add("תן לי בחיטוב");
             this.lstTrainingPlansList.Add("מסה בכל הכוח");
+            ////////////////////////////////////////////////////////////////////////////////////////////
 
-            ListView lstTrainingPlans = FindViewById<ListView>(Resource.Id.llstTrainingPlans);
 
+            ListView lstvTrainingPlans = FindViewById<ListView>(Resource.Id.llstTrainingPlans);       
+            
             ArrayAdapter<string> ListAdapter = new ArrayAdapter<String>
                 (this, Android.Resource.Layout.SimpleListItem1, lstTrainingPlansList);
 
-            lstTrainingPlans.Adapter = ListAdapter;
+            lstvTrainingPlans.Adapter = ListAdapter;
+      
 
 
 

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGym", "MyGym\MyGym.csproj", "{4650A250-64EC-4F8E-835A-138B6D5C5993}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{3639EB9D-65E4-4896-8B01-C5F7FD90ED89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLogic", "DataLogic\DataLogic.csproj", "{71BEFF48-1E09-4862-AE30-F634711BEF8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{4650A250-64EC-4F8E-835A-138B6D5C5993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4650A250-64EC-4F8E-835A-138B6D5C5993}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4650A250-64EC-4F8E-835A-138B6D5C5993}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3639EB9D-65E4-4896-8B01-C5F7FD90ED89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3639EB9D-65E4-4896-8B01-C5F7FD90ED89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3639EB9D-65E4-4896-8B01-C5F7FD90ED89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3639EB9D-65E4-4896-8B01-C5F7FD90ED89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BEFF48-1E09-4862-AE30-F634711BEF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BEFF48-1E09-4862-AE30-F634711BEF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BEFF48-1E09-4862-AE30-F634711BEF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BEFF48-1E09-4862-AE30-F634711BEF8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
