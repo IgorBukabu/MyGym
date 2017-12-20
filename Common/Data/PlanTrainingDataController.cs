@@ -14,12 +14,13 @@ namespace Common.Data
 
         public PlanTrainingDataController()
         {
+            
             database = DependencyService.Get<ISQLite>().GetConnection();
 
             database.CreateTable<TrainingPlan>();
         }
 
-        public TrainingPlan GetTrainingPlan()
+        public List<TrainingPlan> GetTrainingPlans()
         {
             lock (locker)
             {
@@ -29,8 +30,38 @@ namespace Common.Data
                 }
                 else
                 {
-                    return database.Table<TrainingPlan>().First();
+                    List<TrainingPlan> lstAllPlans = new List<TrainingPlan>();
+
+                    foreach (TrainingPlan plan in database.Table<TrainingPlan>())
+                    {
+                        lstAllPlans.Add(plan);
+                    }
+
+                    return lstAllPlans;
                 }
+            }
+        }
+
+        public TrainingPlan GetTrainingPlan(int code)
+        {
+            lock (locker)
+            {
+                if (database.Table<TrainingPlan>().Count() == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    foreach (TrainingPlan currPlan in database.Table<TrainingPlan>())
+                    {
+                        if (currPlan.TrainingPlanCode == code)
+                        {
+                            return currPlan;
+                        }
+                    }
+                }
+
+                return null;
             }
         }
 
@@ -51,8 +82,15 @@ namespace Common.Data
             }
         }
 
-
-
-
+        public void DeleteAllTrainingPlans()
+        {
+            lock (locker)
+            {               
+                foreach (var item in GetTrainingPlans())
+                {
+                    DeleteTrainingPlan(item.TrainingPlanCode);
+                }                
+            }
+        }
     }
 }

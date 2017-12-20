@@ -25,25 +25,21 @@ namespace MyGym
             // Create your application here
             SetContentView(Resource.Layout.TraininPlansUI);
 
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             ////////////////////////////////////////////////////////////////////////////////////////////
-            TrainingPlanDataAccess.PlanTrainingDataBase.SaveTrainingPlan(new TrainingPlan("אני אוהב מסה", 2));
-
-            this.lstTrainingPlansList.Add("תן לי בחיטוב");
-            this.lstTrainingPlansList.Add("מסה בכל הכוח");
+            //TrainingPlanDataAccess.PlanTrainingDataBase.SaveTrainingPlan(new TrainingPlan("אני אוהב מסה", 2));
+            //TrainingPlanDataAccess.PlanTrainingDataBase.SaveTrainingPlan(new TrainingPlan("אני אוהב בנות", 3));
+            //TrainingPlanDataAccess.PlanTrainingDataBase.SaveTrainingPlan(new TrainingPlan("אני אוהב לאכול", 4));            
             ////////////////////////////////////////////////////////////////////////////////////////////
 
+            List<TrainingPlan> lstTrainingPlansListToshow = TrainingPlanDataAccess.PlanTrainingDataBase.GetTrainingPlans();
 
-            ListView lstvTrainingPlans = FindViewById<ListView>(Resource.Id.llstTrainingPlans);       
-            
-            ArrayAdapter<string> ListAdapter = new ArrayAdapter<String>
-                (this, Android.Resource.Layout.SimpleListItem1, lstTrainingPlansList);
+            ListView lstvTrainingPlans = FindViewById<ListView>(Resource.Id.llstTrainingPlans);
 
-            lstvTrainingPlans.Adapter = ListAdapter;
-      
+            TrainPlanAdapter adapterTrainPlans = new TrainPlanAdapter(lstTrainingPlansListToshow);
 
-
-
-
+            lstvTrainingPlans.Adapter = adapterTrainPlans;
         }
     }
 }

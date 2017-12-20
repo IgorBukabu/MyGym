@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
 using Common.Data;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DataLogic
 {
     public class TrainingPlanDataAccess

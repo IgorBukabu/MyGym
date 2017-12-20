@@ -138,7 +138,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\SQLite_MyGym.cs" />
+    <Compile Include="Adapters\AdapterTrainingPlan.cs" />
+    <Compile Include="Adapters\TrainingPlanViewHolder.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +152,9 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\TraininPlansUI.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\trainingPlanRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

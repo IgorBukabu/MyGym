@@ -1,22 +1,12 @@
-﻿using System;
+﻿using Common.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Common.Data;
-using MyGym.Data;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SQLite_MyGym))]
-
-namespace MyGym.Data
+namespace Common.Data
 {
     public class SQLite_MyGym : ISQLite
     {
@@ -34,6 +24,7 @@ namespace MyGym.Data
             var conn = new SQLite.SQLiteConnection(path);
 
             return conn;
+
         }
     }
 }
