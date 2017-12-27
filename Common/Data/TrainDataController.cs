@@ -21,7 +21,7 @@ namespace Common.Data
             database.CreateTable<Train>();
         }
 
-        public List<Train> GetTrains()
+        public List<Train> GetAllTrains()
         {
             lock (locker)
             {
@@ -86,7 +86,7 @@ namespace Common.Data
         {
             lock (locker)
             {
-                foreach (var item in GetTrains())
+                foreach (var item in GetAllTrains())
                 {
                     DeleteTrain(item.TrainingCode);
                 }
