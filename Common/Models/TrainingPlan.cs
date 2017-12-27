@@ -4,13 +4,14 @@ using System.ComponentModel;
 
 namespace Common
 {
-    [Table("TriningPlan")]
+    [Table("TrainingPlan")]
     public class TrainingPlan : INotifyPropertyChanged
     {
         #region DM
 
         private string _trainingPlanName;
-        private int _trainingPlanCode;       
+        private int _trainingPlanCode;
+        private string _trainsInTrainingPlanCodes = "";
 
         #endregion
 
@@ -40,6 +41,19 @@ namespace Common
             private set
             {
                 this._trainingPlanName = value;
+                OnPropertyChanged(nameof(TrainingPlanName));
+            }
+        }
+        
+        public string TrainingPlanTrains
+        {
+            get
+            {
+                return this._trainsInTrainingPlanCodes;
+            }
+            private set
+            {
+                this._trainsInTrainingPlanCodes = value;
                 OnPropertyChanged(nameof(TrainingPlanName));
             }
         }

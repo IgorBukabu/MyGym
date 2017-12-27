@@ -6,11 +6,12 @@ using SQLite;
 
 namespace Common.Models
 {
-    [Table("TriningPlan")]
+    [Table("Train")]
     public class Train : INotifyPropertyChanged
     {
         private string _trainName;
         private int _trainCode;
+        private string _trainMusclesGroupCodes = "";
 
         #region Properties
 
@@ -26,7 +27,7 @@ namespace Common.Models
                 this._trainCode = value;
                 OnPropertyChanged(nameof(TrainingCode));
             }
-        }
+        }        
 
         [NotNull]
         public string TrainingName
@@ -38,6 +39,19 @@ namespace Common.Models
             private set
             {
                 this._trainName = value;
+                OnPropertyChanged(nameof(TrainingName));
+            }
+        }
+
+        public string TrainMusclesGroupCodes
+        {
+            get
+            {
+                return this._trainMusclesGroupCodes;
+            }
+            private set
+            {
+                this._trainMusclesGroupCodes = value;
                 OnPropertyChanged(nameof(TrainingName));
             }
         }

@@ -24,9 +24,6 @@ namespace DataLogic
 
                 return planTrainingDB;
             }
-
-        }
-
-        
+        }       
     }
 }

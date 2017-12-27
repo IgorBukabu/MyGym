@@ -74,6 +74,16 @@ namespace Common.Data
             }
         }
 
+        public int UpdateTrainingPlan(TrainingPlan trainingPlan)
+        {
+            lock (locker)
+            {
+                return database.Update(trainingPlan);
+            }
+        }
+
+
+
         public int DeleteTrainingPlan(int trainingPlanCode)
         {
             lock (locker)

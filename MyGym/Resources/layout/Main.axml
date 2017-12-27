@@ -11,9 +11,9 @@
         android:layout_width="295.0dp"
         android:layout_height="197.5dp"
         android:id="@+id/btnTrainingPlans"
-        android:layout_marginTop="63.0dp"
-        android:layout_marginBottom="30.0dp"
-        android:layout_marginLeft="48.0dp"
+        android:layout_marginTop="54.0dp"
+        android:layout_marginBottom="41.0dp"
+        android:layout_marginLeft="36.5dp"
         android:layout_marginRight="30.0dp" />
     <Button
         android:background="@drawable/red_button"
@@ -21,8 +21,8 @@
         android:layout_width="292.0dp"
         android:layout_height="197.5dp"
         android:id="@+id/btnPersonalStat"
-        android:layout_marginTop="25.5dp"
+        android:layout_marginTop="19.5dp"
         android:layout_marginBottom="20.0dp"
-        android:layout_marginLeft="45.0dp"
+        android:layout_marginLeft="36.0dp"
         android:layout_marginRight="30.0dp" />
 </LinearLayout>

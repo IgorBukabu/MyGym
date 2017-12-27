@@ -13,7 +13,7 @@ using DataLogic;
 
 namespace MyGym
 {
-    [Activity(Label = "TrainingPlansActivity")]
+    [Activity(Theme = "@android:style/Theme.Material.Light",Label = "                                  בחר תוכנית אימונים")]
     public class TrainingPlansActivity : Activity
     {
         private List<String> lstTrainingPlansList = new List<string>();  

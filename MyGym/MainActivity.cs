@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace MyGym
 {
-    [Activity(Label = "MyGym", MainLauncher = true)]
+    [Activity(Theme = "@android:style/Theme.Material.Light",Label = "Welcome to MyGym !!!", MainLauncher = true)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
