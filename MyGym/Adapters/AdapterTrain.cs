@@ -48,18 +48,18 @@ namespace MyGym.Adapters
 
             if (view == null)
             {
-                view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.trainingPlanRow, parent, false);
+                view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.TrainRow, parent, false);
 
                 // var photo = view.FindViewById<ImageView>(Resource.Id.);
-                var name = view.FindViewById<TextView>(Resource.Id.TrainPlanNameTextView);
+                var name = view.FindViewById<TextView>(Resource.Id.TrainNameTextView);
 
-                view.Tag = new TrainingPlanViewHolder() { TrainingPlanName = name };
+                view.Tag = new TrainViewHolder() { TrainName = name };
             }
 
-            var holder = (TrainingPlanViewHolder)view.Tag;
+            var holder = (TrainViewHolder)view.Tag;
 
             //holder.Photo.SetImageDrawable(ImageManager.Get(parent.Context, users[position].ImageUrl));
-            holder.TrainingPlanName.Text = this._trains[position].TrainingName;
+            holder.TrainName.Text = this._trains[position].TrainingName;
 
             return view;
         }
