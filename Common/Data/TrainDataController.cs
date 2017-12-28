@@ -86,10 +86,12 @@ namespace Common.Data
         {
             lock (locker)
             {
-                foreach (var item in GetAllTrains())
-                {
-                    DeleteTrain(item.TrainingCode);
-                }
+                database.DeleteAll<Train>();
+
+                //foreach (var item in GetAllTrains())
+                //{
+                //    DeleteTrain(item.TrainingCode);
+                //}
             }
         }
     }

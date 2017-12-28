@@ -138,8 +138,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\AdapterTrain.cs" />
     <Compile Include="Adapters\AdapterTrainingPlan.cs" />
     <Compile Include="Adapters\TrainingPlanViewHolder.cs" />
+    <Compile Include="Adapters\TrainViewHolder.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,6 +157,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\trainingPlanRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TrainRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

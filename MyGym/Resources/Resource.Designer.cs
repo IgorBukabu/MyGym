@@ -2784,6 +2784,9 @@ namespace MyGym
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0800b6
+			public const int TrainNameTextView = 2131230902;
+			
 			// aapt resource value: 0x7f0800b4
 			public const int TrainPlanNameTextView = 2131230900;
 			
@@ -3024,8 +3027,8 @@ namespace MyGym
 			// aapt resource value: 0x7f0800b5
 			public const int llstTrainingPlans = 2131230901;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int masked = 2131230903;
+			// aapt resource value: 0x7f0800b8
+			public const int masked = 2131230904;
 			
 			// aapt resource value: 0x7f0800a3
 			public const int media_actions = 2131230883;
@@ -3324,8 +3327,8 @@ namespace MyGym
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int visible = 2131230902;
+			// aapt resource value: 0x7f0800b7
+			public const int visible = 2131230903;
 			
 			// aapt resource value: 0x7f080095
 			public const int volume_item_container = 2131230869;
@@ -3623,6 +3626,9 @@ namespace MyGym
 			
 			// aapt resource value: 0x7f030044
 			public const int TraininPlansUI = 2130903108;
+			
+			// aapt resource value: 0x7f030045
+			public const int TrainRow = 2130903109;
 			
 			static Layout()
 			{

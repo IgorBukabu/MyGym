@@ -85,11 +85,11 @@ namespace Common.Data
 
 
 
-        public int DeleteMuscleGroup(int trainingPlanCode)
+        public int DeleteMuscleGroup(int muscleGroupCode)
         {
             lock (locker)
             {
-                return database.Delete<TrainingPlan>(trainingPlanCode);
+                return database.Delete<MuscleGroup>(muscleGroupCode);
             }
         }
 
@@ -97,10 +97,12 @@ namespace Common.Data
         {
             lock (locker)
             {
-                foreach (var item in GetAllMuscleGroups())
-                {
-                    DeleteMuscleGroup(item.MuscleGroupCode);
-                }
+                database.DeleteAll<MuscleGroup>();
+
+                //foreach (var item in GetAllMuscleGroups())
+                //{
+                //    DeleteMuscleGroup(item.MuscleGroupCode);
+                //}
             }
         }
     }

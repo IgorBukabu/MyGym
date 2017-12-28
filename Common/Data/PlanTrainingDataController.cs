@@ -95,11 +95,13 @@ namespace Common.Data
         public void DeleteAllTrainingPlans()
         {
             lock (locker)
-            {               
-                foreach (var item in GetTrainingPlans())
-                {
-                    DeleteTrainingPlan(item.TrainingPlanCode);
-                }                
+            {
+                database.DeleteAll<TrainingPlan>();
+                
+                //foreach (var item in GetTrainingPlans())
+                //{
+                //    DeleteTrainingPlan(item.TrainingPlanCode);
+                //}                
             }
         }
     }
